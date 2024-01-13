@@ -1,0 +1,25 @@
+import java.util.*;
+class number{
+    public static void main(String[]args){
+        String str;
+        int m,n,add,diff;
+        Scanner s = new Scanner(System.in);
+        System.out.println("enter the list of numbers:");
+        str=s.nextLine();
+        System.out.println("enter the n:");
+        n=s.nextInt();
+        System.out.println("enter the m:");
+        m=s.nextInt();
+        String[]data=str.split(" ");
+        Arrays.sort(data);
+        System.out.println("The " + n + "the min of num is " + data[n - 1]);
+        System.out.println("The " + m + "the max of number is " + data[data.length - m]);
+        add = Integer.parseInt(data[n - 1]) + Integer.parseInt(data[data.length - m]);
+        diff = Integer.parseInt(data[n - 1]) - Integer.parseInt(data[data.length - m]);
+        System.out.println("addition:"+add);
+        System.out.println("difference:"+diff);
+        
+        
+        
+    }
+}
